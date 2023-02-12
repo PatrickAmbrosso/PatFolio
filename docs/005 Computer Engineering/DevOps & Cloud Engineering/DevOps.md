@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 alias: 
+=======
+title: DevOps
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 tags: []
 description: "A set of practices that combines software development (Dev) and IT operations (Ops)"
 share: true
@@ -13,6 +17,7 @@ share: true
 # Components of DevOps
 1. Software Development
 	- [Programming Languages](Programming%20Languages.md)
+<<<<<<< HEAD
 		- [Python](../../../Python.md)
 		- [GoLang](GoLang.md)
 	- [Scripting Languages](Scripting%20Languages.md)
@@ -20,6 +25,15 @@ share: true
 		- [Bash](../../002%20Inbox/Bash.md)
 	- [Version Control System](../Operating%20System%20and%20Software/Version-Control-System.md)
 		- [Git](../Operating%20System%20and%20Software/Git.md)
+=======
+		- [Python](Python.md)
+		- [GoLang](GoLang.md)
+	- [Scripting Languages](Scripting%20Languages.md)
+		- [PowerShell](PowerShell.md)
+		- [Bourne Again Shell](../../002%20Inbox/Bourne-Again-Shell.md)
+	- [Version Control System](../Operating%20System%20and%20Software/Version%20Control%20Systems/Version-Control-System.md)
+		- [GIT VCS](../Operating%20System%20and%20Software/Version%20Control%20Systems/GIT-VCS.md)
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 2. [Databases](Databases.md)
 	- [Relational Databases](Relational%20Databases.md)
 	- [Non-Relational Databases](Non-Relational%20Databases.md)

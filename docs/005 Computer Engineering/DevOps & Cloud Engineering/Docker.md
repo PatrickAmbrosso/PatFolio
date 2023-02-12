@@ -1,15 +1,24 @@
 ---
+<<<<<<< HEAD
+=======
+title: Docker
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 share: true
 ---
 # What is Docker?
 Docker is a containerization service.
 
+<<<<<<< HEAD
 [Cheat Sheet - Docker](../../002%20Inbox/Cheat-Sheet---Docker.md)
+=======
+[Docker Reference Cookbook](../../002%20Inbox/Docker-Reference-Cookbook.md)
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 
 # Terminologies and Definitions
 1. Containers
 2. Virtual Machine
 3. Similarities or differences between containers and virtual machines
+<<<<<<< HEAD
 4. asd
 5. as
 6. das
@@ -17,6 +26,8 @@ Docker is a containerization service.
 8. sda
 9. s
 10. d
+=======
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 
 # Basics of Docker Architecture
 
@@ -56,7 +67,11 @@ as
 as
 ```
 
+<<<<<<< HEAD
 Docker images are pulled in parts called . If a part pre-exists, it will not be downloaded again. Docker simply uses the previously downloaded part, even it was downloaded as part of another image. This ensures that there are no duplication and/or redundant image files in the system.
+=======
+Docker images are pulled in parts called `fill answer here`. If a part pre-exists, it will not be downloaded again. Docker simply uses the previously downloaded part, even it was downloaded as part of another image. This ensures that there are no duplication and/or redundant image files in the system.
+>>>>>>> 827582ec62b4d14969444377523a6fae24774294
 
 When a pull request is made to the docker repository, if the whole image (or parts of it) already exists, docker does not download the image (or the existing parts) once again. Instead, prints to the console that the image pre-exists.
 
