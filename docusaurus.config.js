@@ -6,12 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Welcome to the PatFolio',
+  title: 'The PatFolio',
   tagline: 'A personal portfolio, technical documentation, blog and much more from Patrick Ambrose built with Docusaurus.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  // url: 'https://your-docusaurus-test-site.com',
+  url: 'https://patrickambrose.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -68,9 +69,9 @@ const config = {
         },
         items: [
           {
-            to: '/docs/001 Get Started/AmbrOS',
+            to: '/docs/001 Get Started/Welcome',
             position: 'left',
-            label: 'Documentation & Notes',
+            label: 'Digital Garden',
           },
           {
             to: '/blog',
@@ -105,14 +106,14 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Content',
             items: [
               {
                 label: 'Blog',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
+                label: 'GitHub Repo (Open Source)',
                 href: 'https://github.com/PatrickAmbrosso/PatFolio',
               },
             ],
