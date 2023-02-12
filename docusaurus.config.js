@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'PatFolio',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -61,23 +61,26 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Patrick Ambrose',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Patrick Ambrose Brand',
+          src: 'img/PatLogo Model-1.svg',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/docs/001 Get Started/AmbrOS',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation & Notes',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            to: '/blog',
+            label: 'Blogs',
+            position: 'left'
+          },
+          {
+            to: '/Certifications',
+            label: 'Certifications',
+            position: 'left'
           },
         ],
       },
@@ -89,7 +92,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/001 Get Started/AmbrOS',
               },
             ],
           },
