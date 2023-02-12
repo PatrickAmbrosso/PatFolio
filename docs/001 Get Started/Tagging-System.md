@@ -1,6 +1,6 @@
 ---
-alias: Tagging System
-tags: Note/Evergreen 
+title: Tagging System
+tags: []
 description: "Focusses on Tags being the weak glue that holds the notes together"
 share: true
 ---

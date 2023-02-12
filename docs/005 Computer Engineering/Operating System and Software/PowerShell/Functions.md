@@ -1,6 +1,6 @@
 ---
-alias: 
-tags: Note/Evergreen 
+title: Functions
+tags: []
 description: "Working with Functions in PowerShell"
 share: true
 ---
