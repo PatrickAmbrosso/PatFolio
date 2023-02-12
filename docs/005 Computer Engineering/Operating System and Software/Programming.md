@@ -1,19 +1,9 @@
 ---
-<<<<<<< HEAD
-alias: Programming
-=======
 title: Programming
->>>>>>> 827582ec62b4d14969444377523a6fae24774294
 tags: []
 description: "The plunge into telling the computer what to do and how to do it"
 share: true
 ---
-<<<<<<< HEAD
----
-> **Related Pages:** [Software Development](Software%20Development.md)
----
-=======
->>>>>>> 827582ec62b4d14969444377523a6fae24774294
 # The fundamentals of programming
 This particular guide (of sorts) is extracted with heavy inspiration from the video by [FreeCodeCamp](https://www.freecodecamp.org/) by the name [Introduction to Programming and Computer Science](https://www.youtube.com/watch?v=zOjov-2OZ0E) and it deals with the most common aspects of programming in general while staying language and technology agnostic. This is accomplished by discussing the fundamental concepts that exist across all programming languages.
 
