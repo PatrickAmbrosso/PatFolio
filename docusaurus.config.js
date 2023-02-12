@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PatFolio',
-  tagline: 'Dinosaurs are cool',
+  title: 'Welsome to the PatFolio',
+  tagline: 'A personal portfolio, technical documentation, blog and much more from Patrick Ambrose built with Docusaurus.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -88,15 +88,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Socials',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/PatrickAmbrosso',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/patrickambrosso/',
               },
               {
                 label: 'Twitter',
@@ -118,7 +118,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Patrick Ambrose`,
+        copyright: `Copyright © ${new Date().getFullYear()} Patrick Ambrose | Built using Docusaurus, a lot of StackOverflow and a ton of ❤️`,
       },
       prism: {
         theme: lightCodeTheme,
