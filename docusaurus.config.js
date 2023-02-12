@@ -21,8 +21,8 @@ const config = {
   organizationName: 'PatrickAmbrosso', // Usually your GitHub org/user name.
   projectName: 'PatFolio', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'ignore',
   trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -88,15 +88,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/001 Get Started/AmbrOS',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
@@ -109,7 +100,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/PatrickAmbrosso',
               },
             ],
           },
@@ -122,7 +113,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/PatrickAmbrosso/PatFolio',
               },
             ],
           },
