@@ -1,7 +1,7 @@
 ---
 title: Powershell Basics
-tags:
-description: 
+tags: []
+description: ""
 share: true
 ---
 **Related Pages:** [PowerShell](PowerShell.md)
