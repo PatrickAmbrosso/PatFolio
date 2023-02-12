@@ -1,5 +1,5 @@
 ---
-title: 
+title: Data Types
 tags: [Reference]
 description: ""
 share: true
