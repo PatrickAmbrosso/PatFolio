@@ -4,9 +4,6 @@ tags: [Reference]
 description: ""
 share: true
 ---
----
-> **Related:** [Python](Python.md)  
----
 # Working with Variables
 Variables are placeholders in memory to store some value. In python, variables cannot be just defined whereas a variables is created upon declaring it.  
 

@@ -1,5 +1,5 @@
 ---
-title: "YAML ain't a Markup Language"
+title: "YAML"
 tags: [Reference]
 description: "Everything about the serialization language YAML"
 share: true
