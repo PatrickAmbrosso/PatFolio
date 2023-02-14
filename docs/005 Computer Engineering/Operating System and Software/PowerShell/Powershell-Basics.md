@@ -2,10 +2,10 @@
 title: Powershell Basics
 tags: []
 description: ""
+# Docusaurus Configurations
 share: true
+sidebar_position: 2
 ---
-**Related Pages:** [PowerShell](PowerShell.md)
-
 # Topics to Cover
 1. Talk about comparison operators
 2. Talk about continue, break, and exit keywords and what they mean in what context
