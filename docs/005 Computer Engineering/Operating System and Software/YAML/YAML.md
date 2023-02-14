@@ -4,16 +4,13 @@ tags: [Reference]
 description: "Everything about the serialization language YAML"
 share: true
 ---
----
-> **Related Pages:** 
----
 # YAML
 **YAML** or **YAML Ain't a Markup Language** is a [Data Serialization Language](Data%20Serialization%20Language.md) that exists with one primary goal above others, to make the code **Human-Readable** and it is primarily used to write configuration files and transfer data across apps and services. 
 
 The following are some of the key pointers in YAML
 - YAML borrows features from [PERL](PERL.md), [C Language](C%20Language.md), [XML](Extensible%20Markup%20Language.md) and more.
 - YAML is considered a superset of [JSON](JavaScript%20Object%20Notation.md), hence [JSON](JavaScript%20Object%20Notation.md) Code is considered as valid YAML.
-- YAML relies heavily on indentation (like [Python](Python.md)) and hence spaces are crucial to separate the entities.
+- YAML relies heavily on indentation (like [Getting Started (Python)](../Python/Getting-Started-(Python).md)) and hence spaces are crucial to separate the entities.
 - YAML files use a `.yml` or a `.yaml` file extension.
 - All data in YAML is either a List or a Map
 	- **Lists** are series of values of (mostly) the same type, such as listing different fruits in a shop.
