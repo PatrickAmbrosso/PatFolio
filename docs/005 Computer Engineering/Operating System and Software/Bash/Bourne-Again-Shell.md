@@ -7,8 +7,8 @@ description: "Everything about the shell that is found in most linux distributio
 share: true
 sidebar_position: 1
 ---
-%%import Tabs from '@theme/Tabs';  
-import TabItem from '@theme/TabItem';%%
+import Tabs from '@theme/Tabs';  
+import TabItem from '@theme/TabItem';
 # The Bourne Again Shell
 **Bash** or ***B*ourne *A*gain *Sh*ell** is the command line shell that is found in most of the Linux Distributions. Some of the other popular shells include the following.
 1. Zsh
