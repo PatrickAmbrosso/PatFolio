@@ -5,14 +5,16 @@ description: "Up and Running with PowerShell"
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
+toc_min_heading_level: 2
+toc_min_heading_level: 6
 ---
-# Overview
+## Overview
 
 
-# Getting Started with PowerShell
+## Getting Started with PowerShell
 At its Core (pun intended) PowerShell is an interactive Shell built on the `.NET` framework. On top of this, PowerShell supports advanced scripting and automation features. PowerShell has support to commands from the CMD and Unix shells.
 
-## Cmdlets in PowerShell
+### Cmdlets in PowerShell
 Commands in PowerShell are referred to as cmdlets (pronounced as command-lets).  Each cmdlet in PowerShell follows a `verb-noun` pattern.
 
 **Command:**
@@ -43,7 +45,7 @@ d----          03-12-2022    21:27                Sound Recordings
 d----          13-11-2022    19:20                Visual Studio 2022
 ```
 
-:::tip+ Word-Capitalization in PowerShell
+:::tip Word-Capitalization in PowerShell
 **POWERSHELL IS NOT CASE-SENSITIVE**. However, it is recommended to use the PascalCasing format when writing in PowerShell to aid in readability and to be uniform across the board. That being said, PowerShell will recognize and run the commands in both capital and small forms of the alphabet, so both `Get-ChildItem` and `geT-cHiLdiTeM` would fetch the contents of a specified directory.
 :::
 
@@ -117,7 +119,7 @@ PowerShell cmdlets are positional in nature, meaning the parameters can be passe
 
 In the case of the `Get-ChildItem` cmdlet, the order of positional parameters are `[-Path] [-Filter] [-Include] [-Exclude] [-Recurse]` and so on.
 
-## Everything is an Object
+### Everything is an Object
 PowerShell handles everything as an object from the `.NET` while most other shells handle them as text. This gives immense control over what is possible with the shell. This enables to use the full functionality of the `.NET` object library.
 
 **Command:**
@@ -135,13 +137,13 @@ PowerShell handles everything as an object from the `.NET` while most other shel
 
 All cmdlets that generate an output are also created as objects. These objects can then be referenced and used downstream.
 
-## Administrators as First-Class Users
+### Administrators as First-Class Users
 
 
-## The Power of Piping
+### The Power of Piping
 
 ---
-# Getting Started
+## Getting Started
 
 PowerShell Versions
 PowerShell Availability
@@ -180,7 +182,7 @@ REMARKS
 ```
 
 ---
-# Getting Comfortable
+## Getting Comfortable
 
 1. [PowerShell Basics](PowerShell%20Basics.md)
 2. [PowerShell Control Flow](PowerShell%20Control%20Flow.md)
@@ -189,7 +191,7 @@ REMARKS
 5. [PowerShell Modules](PowerShell%20Modules.md)
 
 ---
-# Showcase
+## Showcase
 
 1. [Customizing the PowerShell Prompt](Customizing%20the%20PowerShell%20Prompt.md)
 2. [PowerShell Showcase - Working with Objects](PowerShell%20Showcase%20-%20Working%20with%20Objects.md)
@@ -200,12 +202,12 @@ REMARKS
 7. [PowerShell Showcase - Managing CI-CD Pipelines](PowerShell%20Showcase%20-%20Managing%20CI-CD%20Pipelines.md)
 
 ---
-# Communities & Resources
+## Communities & Resources
 
-## Source Code
+### Source Code
 1. [PowerShell GitHub Repository](https://github.com/PowerShell/PowerShell.git)
 
-## Communities
+### Communities
 1. [PowerShell User Groups](https://aka.ms/psusergroup)
 2. [PowerShell Tech Community](https://techcommunity.microsoft.com/t5/powershell/ct-p/WindowsPowerShell)
 3. [DSC Community](https://dsccommunity.org/)
@@ -216,7 +218,7 @@ REMARKS
 8. [PowerShell Discord Server](https://aka.ms/psdiscord)
 9. [Spiceworks PowerShell Forum](https://community.spiceworks.com/programming/powershell)
 
-## Books
+### Books
 1. **PowerShell for SysAdmins** by **Adam Bertram** | [No Starch Press](https://nostarch.com/powershellsysadmins)
 2. **Learn PowerShell in a Month of Lunches** by **Travis Plunk**, **James Petty**, **Tyler Leonhardt**, **Don Jones** and **Jeffery Hicks** | [Manning](https://www.manning.com/books/learn-powershell-in-a-month-of-lunches) | [Amazon](https://www.amazon.com/Learn-PowerShell-Month-Lunches-Fourth-ebook/dp/B09XBTPJ3S)
 3. **Mastering PowerShell Scripting** by **Chris Dent** | [Packt](https://www.packtpub.com/product/mastering-powershell-scripting-fourth-edition/9781800206540) | [Amazon](https://www.amazon.com/Mastering-PowerShell-Scripting-Automate-environment/dp/1800206542)
@@ -224,10 +226,10 @@ REMARKS
 5. **PowerShell Pocket Reference** by **Lee Holmes** | [O'Reilly](https://www.oreilly.com/library/view/powershell-pocket-reference/9781098101664/)
 6. **PowerShell 7 for IT Professionals** by **Thomas Lee** | [Wiley](https://www.wiley.com/en-us/PowerShell+7+for+IT+Professionals-p-9781119644705) | [Amazon](https://www.amazon.com/PowerShell-7-Pros-Thomas-Lee/dp/1119644720/ref=sr_1_1?crid=2I42JJMSY2NXM&keywords=PowerShell+7+for+IT+Professionals)
 
-## YouTube Video Tutorials
+### YouTube Video Tutorials
 
 
-## Miscellaneous Resources
+### Miscellaneous Resources
 1. [PowerShell Digital Art](https://learn.microsoft.com/en-us/powershell/scripting/community/digital-art)
 
 ---

@@ -6,18 +6,18 @@ description: "Everything about the Python Programming Language"
 share: true
 sidebar_position: 1
 ---
-# The Beginnings 
+## The Beginnings 
 
 
 ---
-# Technical Details and Specifications
+## Technical Details and Specifications
 
 
 ---
-# Getting Started
+## Getting Started
 
 
-## Ways to run Python
+### Ways to run Python
 Python can be run in 3 different ways and their features and who might consider using them are tabulated below. 
 
 | Environment                              | Description                                                                                                                                                                                                      | Examples           | Use Cases                                                                                                            |
@@ -27,7 +27,7 @@ Python can be run in 3 different ways and their features and who might consider 
 | Notebook Environment                     | Platforms that are well suited for learning python that support in-line markdown notes. These are not regular `.py` files. But they support input and output one after the other.                                | Jupyter Notebook   | Useful in visualizing and learning python in the same environment. It supports sharing of these notebooks with ease.                                                                                                                     |
 
 ---
-# Getting Comfortable
+## Getting Comfortable
 1. [Python - Inputs and Outputs](Python%20-%20Inputs%20and%20Outputs.md)
 2. [Python - Commenting and Indentation](Python%20-%20Commenting%20and%20Indentation.md)
 3. [Python - Variables](Python%20-%20Variables.md)
@@ -42,15 +42,15 @@ Python can be run in 3 different ways and their features and who might consider 
 12. [Python - Generators](Python%20-%20Generators.md)
 
 ---
-# Showcase 
+## Showcase 
 
 
 ---
-# Projects
+## Projects
 
 
 ---
-# Communities and Resources
+## Communities and Resources
 
 
 ---
