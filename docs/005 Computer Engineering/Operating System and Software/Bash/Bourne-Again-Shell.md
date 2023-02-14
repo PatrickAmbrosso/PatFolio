@@ -5,7 +5,7 @@ tags: []
 description: "Everything about the shell that is found in most linux distributions"
 # Docusaurus Configurations
 share: true
-sidebar_position: 
+sidebar_position: 1
 ---
 # The Bourne Again Shell
 **Bash** or ***B*ourne *A*gain *Sh*ell** is the command line shell that is found in most of the Linux Distributions. Some of the other popular shells include the following.
