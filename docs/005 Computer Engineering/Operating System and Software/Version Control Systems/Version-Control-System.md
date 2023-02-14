@@ -16,7 +16,7 @@ It is a system that records changes made to a file or a set of files over a peri
 	- *Lack of collaboration* features.
 	- *No control of the local data* by the administrators.
 
-`![center](EXCLD%202022-12-07%2012.28.26.excalidraw.md)`
+![EXCLD Version Control System Process.excalidraw.png](EXCLD%20Version%20Control%20System%20Process.excalidraw.png)
 
 ## Centralized Version Control Systems (CVCS)
 - In a centralized Version Control System, the changes are tracked in a *central location* on a server.
