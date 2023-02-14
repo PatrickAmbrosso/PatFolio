@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started with PowerShell
 tags: [Sys-Admin, Automation]
 description: "Up and Running with PowerShell"
 # Docusaurus Configurations

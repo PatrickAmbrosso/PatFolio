@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting Started with Python
 tags: [Reference]
 description: "Everything about the Python Programming Language"
 # Docusaurus Configurations
