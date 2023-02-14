@@ -14,36 +14,76 @@ sidebar_position: 1
 
 <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
-    ```PowerShell
-    Get-ChildItem -Recurse -Include "*.csv"
-    ```
+    PowerShell
   </TabItem>
   <TabItem value="mac" label="macOS">
-	```bash
-	ls -r
-	```
+	Bash
   </TabItem>
   <TabItem value="linux" label="Linux">
-    ```bash
-	ls -r
-	```
+    Unix Bash
   </TabItem>
 </Tabs>
 
-<Tabs groupId="operating-systems">
-  <TabItem value="win" label="Windows">
-    ```PowerShell
-    Get-ChildItem -Recurse -Include "*.csv"
-    ```
-  </TabItem>
-  <TabItem value="mac" label="macOS">
-	```bash
-	ls -r
-	```
-  </TabItem>
-  <TabItem value="linux" label="Linux">
-    ```bash
-	ls -r
-	```
-  </TabItem>
+```mdx-code-block
+<Tabs>
+<TabItem value="docusaurus.config.js">
+```
+
+```js
+module.exports = {
+  themeConfig: {
+    prism: {
+      magicComments: [
+        // Remember to extend the default highlight class name as well!
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: {start: 'highlight-start', end: 'highlight-end'},
+        },
+        // highlight-start
+        {
+          className: 'code-block-error-line',
+          line: 'This will error',
+        },
+        // highlight-end
+      ],
+    },
+  },
+};
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="src/css/custom.css">
+```
+
+```css
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="myDoc.md">
+```
+
+````md
+In JavaScript, trying to access properties on `null` will error.
+
+```js
+const name = null;
+// This will error
+console.log(name.toUpperCase());
+// Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
+```
+````
+
+```mdx-code-block
+</TabItem>
 </Tabs>
+```
