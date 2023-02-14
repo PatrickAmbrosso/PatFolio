@@ -14,6 +14,7 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';  
 import TabItem from '@theme/TabItem';
+
 <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
     PowerShell
@@ -30,63 +31,37 @@ Test Comment
 ## Test heading
 
 ```mdx-code-block
-<Tabs>
-<TabItem value="docusaurus.config.js">
+<Tabs groupId="dbms-program">
+<TabItem value="MySQL">
 ```
 
-```js
-module.exports = {
-  themeConfig: {
-    prism: {
-      magicComments: [
-        // Remember to extend the default highlight class name as well!
-        {
-          className: 'theme-code-block-highlighted-line',
-          line: 'highlight-next-line',
-          block: {start: 'highlight-start', end: 'highlight-end'},
-        },
-        // highlight-start
-        {
-          className: 'code-block-error-line',
-          line: 'This will error',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
+```sql
+DROP DATABASE IF EXISTS mydb;
+CREATE DATABASE mydb;
+USE mydb;
+SHOW DATABASES
 ```
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="src/css/custom.css">
+<TabItem value="PostgreSQL">
 ```
 
-```css
-.code-block-error-line {
-  background-color: #ff000020;
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-  border-left: 3px solid #ff000080;
-}
+```sql
+DROP DATABASE IF EXISTS mydb;
+CREATE DATABASE mydb;
+USE mydb;
+\l;
 ```
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="myDoc.md">
+<TabItem value="SQL Server">
 ```
 
-````md
-In JavaScript, trying to access properties on `null` will error.
-
-```js
-const name = null;
-// This will error
-console.log(name.toUpperCase());
-// Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
+```sql
+# TSQL Syntax
 ```
-````
 
 ```mdx-code-block
 </TabItem>
