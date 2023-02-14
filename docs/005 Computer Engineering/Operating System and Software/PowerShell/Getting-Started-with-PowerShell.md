@@ -5,8 +5,6 @@ description: "Up and Running with PowerShell"
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
-toc_min_heading_level: 2
-toc_min_heading_level: 6
 ---
 ## Overview
 
