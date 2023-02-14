@@ -2,7 +2,9 @@
 title: Commenting and Indentation
 tags: [Reference]
 description: ""
+# Docusaurus Configurations
 share: true
+sidebar_position: 2
 ---
 # Commenting and Indentation
 Commenting and Indentation are some of the most commonly used tools when writing code. Both of these help in making the code easier to read, understand and debug. The concept of [Self-Documenting Code](Self-Documenting%20Code.md) is emphasized here. It means that any code written must be structured in a way that it is evident of what action it performs.
@@ -10,7 +12,7 @@ Commenting and Indentation are some of the most commonly used tools when writing
 ## Commenting Code
 Comments are a way to document code as it is written. While code must preferably be self-documenting, comments play a major part in making sure that the code is easier to understand and troubleshoot. In python, single line commenting is made by using the `#` symbol.
 
-Python does not have a specific syntax for multi-line comments, thus a multi-line comment is a sequence of single-line comments each preceded with a `#` sign. 
+[Python](./Getting-Started-(Python).md) does not have a specific syntax for multi-line comments, thus a multi-line comment is a sequence of single-line comments each preceded with a `#` sign. 
 
 However, as python ignores string literals that are not assigned to a variable, a multi-line string can be used similar to a multi-line comment. By this way, python will read the string, but as the string is not assigned to a variable, it is ignored. Multi-line strings are made using triple quotes (`"""`) and placing the comment within the pair of these triple quotes.
 
