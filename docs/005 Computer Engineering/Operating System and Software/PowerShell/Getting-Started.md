@@ -1,11 +1,10 @@
 ---
-title: Getting Started (PowerShell)
+title: Getting Started
 tags: [Sys-Admin, Automation]
 description: "Up and Running with PowerShell"
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
-image: https://wallpapercave.com/wp/wp7917357.png
 ---
 # Overview
 
@@ -44,8 +43,9 @@ d----          03-12-2022    21:27                Sound Recordings
 d----          13-11-2022    19:20                Visual Studio 2022
 ```
 
-> [!summary] Word-Capitalization in PowerShell
-> **POWERSHELL IS NOT CASE-SENSITIVE**. However, it is recommended to use the PascalCasing format when writing in PowerShell to aid in readability and to be uniform across the board. That being said, PowerShell will recognize and run the commands in both capital and small forms of the alphabet, so both `Get-ChildItem` and `geT-cHiLdiTeM` would fetch the contents of a specified directory.
+:::tip+ Word-Capitalization in PowerShell
+**POWERSHELL IS NOT CASE-SENSITIVE**. However, it is recommended to use the PascalCasing format when writing in PowerShell to aid in readability and to be uniform across the board. That being said, PowerShell will recognize and run the commands in both capital and small forms of the alphabet, so both `Get-ChildItem` and `geT-cHiLdiTeM` would fetch the contents of a specified directory.
+:::
 
 PowerShell uses and recommends its scripting users to stick with a defined set of verbs, while the setting of noun is open for the scripting user. To get a list of all verbs used by PowerShell, simply type the `Get-Verb` cmdlet onto the PowerShell terminal.
 
