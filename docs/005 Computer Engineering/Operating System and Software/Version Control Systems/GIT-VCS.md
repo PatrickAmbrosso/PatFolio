@@ -1,8 +1,11 @@
 ---
+# Basic Note Frontmatter
 title: GIT VCS
 tags: [Software-Development]
 description: ""
+# Docusaurus Configurations
 share: true
+sidebar_position: 2
 ---
 # Introduction to Git
 
@@ -56,7 +59,7 @@ Files that are being actively tracked by git can have 4 states
 2. **Staged** - Files that have are set to be saved in the git database in the next snapshot.
 3. **Committed** - Files that have been saved in the git database.
 
-`![80%|center](EXCLD%202022-12-16%2005.49%20States%20of%20a%20Git%20Tracked%20File.excalidraw.md)`
+`![EXCLD States of a Git Tracked File.png](EXCLD%20States%20of%20a%20Git%20Tracked%20File.png)`
 
 These states are cyclic in nature. When a file is committed, it is sent back to the unmodified state, as there are not changes from the last snapshot or checkout. But subsequently when changes are made to the file, it goes into the modified state, which can then be staged and eventually committed, thus performing the cycle all over again.
 
@@ -65,7 +68,7 @@ With this in mind, all git projects have 3 sections namely,
 2. **Staging Area** - Where the files that are set to be saved in the next snapshot reside. Physically, it is present in the `.git` directory. In git terminology, it is referred to as `index`.
 3. **`.git` directory** - This is where git stores all the metadata and object database for the git project.
 
-`![75%|center](EXCLD%202022-12-16%2005.19%20Sections%20of%20a%20Git%20Project.excalidraw.md)`
+`![EXCLD Sections of a Git Project.png](EXCLD%20Sections%20of%20a%20Git%20Project.png)`
 
 ## Git and Command Line
 The Power of Git comes with its support on the command-line. Although Git contains several open-source and paid GUI clients available, most of them implement a subset of git's capability. This makes the command line the only place where git shines with its full capability.

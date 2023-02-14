@@ -6,12 +6,12 @@ description: "Working with Functions in PowerShell"
 share: true
 sidebar_position: 5
 ---
-# Introduction to Functions in PowerShell
+## Introduction to Functions in PowerShell
 Functions are blocks of code that performs a specific operation and that alone. Functions can help to make the code easier to read and understand, as well as debug in case of errors. Functions are used to compartmentalize the code and to avoid one pile of code mess that is executed in linear fashion. Functions can be reused by invoking (or calling) them when required.
 
 In PowerShell, this might be similar to a cmdlet, but cmdlets are typically written in languages other than PowerShell, such as C#. Functions can be referred to as user-defined entities, written in PowerShell.
 
-# Function Definition
+## Function Definition
 Function definition is the process of building the function with what inputs and output the function works with. It is best practice to use the default naming scheme of PowerShell that is a `Verb-Noun` pattern. A general function definition follows the pattern of the keyword function, then the function's name and then a set of curly braces within which the code to be executed lives.
 
 ```PowerShell
@@ -25,7 +25,7 @@ Install-Software
 To change the function and what it does, it can be redefined once again and the changes are captured. Functions can be defined directly on the command line interface, in a script or in a [module](PowerShell%20Modules.md). 
 
 ---
-# Functions with parameters
+## Functions with parameters
 When a function is defined, it can be designed to accept several inputs (parameters), that can be used inside the function for processing. These parameters can be made mandatory or optional, and can even be made to restrict the input to a limited possible list of arguments.
 
 Parameters for functions can be defined in PowerShell with a `param` block. The `param` block holds all the parameters for the function.
@@ -69,7 +69,7 @@ Install-Software
 
 The `param` block can be used to modify all the attributes about a parameter that PowerShell can and will accept from the user. Some oft he most common ones are discussed below
 
-## Setting Datatype
+### Setting Datatype
 When defining functions in the `param` block, the data type of the parameter value can be defined as well. This is optional, but is recommended as it helps avoid a lot of errors based on the datatype of the parameter.
 
 ```PowerShell
@@ -85,7 +85,7 @@ function Install-Software {
 Install-Software
 ```
 
-## Setting Mandatory Parameters
+### Setting Mandatory Parameters
 Parameters can be set to be mandatorily provided by the invoking entity for the script to proceed in PowerShell. If a mandatory argument is skipped, PowerShell prompts the invoking entity to enter in a value for the mandatory parameter.
 
 ```PowerShell
@@ -101,7 +101,7 @@ function Install-Software {
 Install-Software -Version 3
 ```
 
-## Setting Default values to Parameters
+### Setting Default values to Parameters
 Default values can be set for parameters, that take effect when the invoking entity does not explicitly pass in values to the parameters. This is much used for mandatory arguments avoid PowerShell from prompting the invoking entity if the mandatory parameter value was not explicitly passed.
 
 ```PowerShell
@@ -117,7 +117,7 @@ function Install-Software {
 Install-Software
 ```
 
-## Setting up Parameter Validation
+### Setting up Parameter Validation
 The values passed into the parameters can also be validated before PowerShell executes the function. This helps in avoiding extensive error handling and mitigation code.
 
 ```PowerShell

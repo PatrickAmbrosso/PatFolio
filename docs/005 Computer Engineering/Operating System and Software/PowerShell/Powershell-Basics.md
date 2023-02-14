@@ -6,18 +6,18 @@ description: ""
 share: true
 sidebar_position: 2
 ---
-# Topics to Cover
+Topics to Cover
 1. Talk about comparison operators
 2. Talk about continue, break, and exit keywords and what they mean in what context
 
-# Variables
+## Variables
 Variables are placeholders to store values. Variables in PowerShell begin with a dollar(\$) sign. This indicates to PowerShell that a variable is called and not a cmdlet. Variables can be declared and referred to by using the name of the variable after the dollar(\$) sign. To assign values to a variable, the assignment is done using the equals(=) sign (assignment operator - dealt later).
 
 Variables can be set and retrieved using the traditional cmdlet way of defining and accessing variables by using the `Set-Variable` and `Get-Variable` cmdlets.
 
 **Command:**
 
-```PowerShell
+```PowerShell 
 $FavoriteFruit = "Apple"
 Set-Variable -Name FavoriteFood -Value "Soup"
 $FavoriteFruit
@@ -65,12 +65,12 @@ FavoriteFruit                  Apple
 ---snip---
 ```
 
-## Automatic Variables
+### Automatic Variables
 These are variables defined and maintained by the PowerShell environment. It is generally not considered good practice to edit these variables as they might lead to unexpected outputs. Thus, the automatic variables must be considered as `Read-Only` variables.
 
 To learn more about automatic variables visit the [PowerShell Documentation Page for Automatic Variables](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.3) 
 
-## User-Defined Variables
+### User-Defined Variables
 User-defined variables are variables that are defined and managed by the users. A variable must be defined before it can be called upon and used in the PowerShell environment.
 
 > [!abstract] Setting Strict Mode
@@ -81,10 +81,8 @@ User-defined variables are variables that are defined and managed by the users. 
 
 Once defined, a variable can be used and reused and reassigned to any value. A user-defined variable's value does not change unless explicitly changed by the user or a script.
 
-
 ---
-
-# Data Types
+## Data Types
 PowerShell supports a variety of variable types derived directly from its `.NET` feature set.
 
 To reference variables as values when using with strings, double quotes must be used and to fetch the names of the variables, single quotes must be used.
@@ -116,23 +114,23 @@ It is $true that $StringVar plus, I have $NumVar days of vacation left.
 
 ---
 
-# Data Structures
+## Data Structures
 
 
 ---
 
-# Objects
+## Objects
 In PowerShell, everything is an object. This enables far more native functionality. Objects have Properties and Methods.
 1. **Properties** - Data about the object.
 2. **Methods** - Functionality of the object.
 
 ---
 
-# Piping and Redirection
+## Piping and Redirection
 
 
 ---
-# PowerShell Scripts
+## PowerShell Scripts
 
 
 ---
