@@ -6,7 +6,7 @@ description: ""
 share: true
 sidebar_position: 6
 ---
-# Introduction to Modules
+## Introduction to Modules
 PowerShell module is a package that contains various commands such as functions, cmdlets, aliases, parameters, workflow, and providers. And PowerShell comes with numerous modules installed by default.
 
 ```PowerShell
@@ -23,15 +23,15 @@ Get-Command -Module Microsoft.PowerShell.Management
 Some modules might also have **private functions** or **helper functions** that operate within the scope of the module alone, and they cannot be accessed by the user. Power
 
 ---
-# The Components of a PowerShell Module
+## The Components of a PowerShell Module
 
 
 ---
-# Working with Custom Modules
+## Working with Custom Modules
 
 
 ---
-# Creating own Modules
+## Creating own Modules
 
 
 ---
