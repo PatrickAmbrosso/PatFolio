@@ -1,8 +1,10 @@
 ---
 title: Customizing the PowerShell Prompt
-tags: [Reference]
+tags: []
 description: "Various options to customize and personalize the PowerShell Prompt."
+# Docusaurus Configurations
 share: true
+sidebar_position: 1
 ---
 The [PowerShell](PowerShell.md) Prompt customization script is given below.
 
