@@ -90,6 +90,8 @@ After installation, you can start and stop the SQL Server service using the "Ser
   </TabItem>
 </Tabs>
 
+:::tip Create Databases
+
 ```mdx-code-block
 <Tabs groupId="dbms-program">
 <TabItem value="MySQL">
@@ -127,3 +129,5 @@ USE mydb;
 </TabItem>
 </Tabs>
 ```
+
+:::
