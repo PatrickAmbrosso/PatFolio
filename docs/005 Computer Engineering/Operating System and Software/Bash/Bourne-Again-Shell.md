@@ -7,13 +7,13 @@ description: "Everything about the shell that is found in most linux distributio
 share: true
 sidebar_position: 1
 ---
-import Tabs from '@theme/Tabs';  
-import TabItem from '@theme/TabItem';
 # The Bourne Again Shell
 **Bash** or ***B*ourne *A*gain *Sh*ell** is the command line shell that is found in most of the Linux Distributions. Some of the other popular shells include the following.
 1. Zsh
 2. Fish
 
+import Tabs from '@theme/Tabs';  
+import TabItem from '@theme/TabItem';
 <Tabs groupId="operating-systems">
   <TabItem value="win" label="Windows">
     PowerShell
@@ -26,6 +26,8 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+import Tabs from '@theme/Tabs';  
+import TabItem from '@theme/TabItem';
 ```mdx-code-block
 <Tabs>
 <TabItem value="docusaurus.config.js">
