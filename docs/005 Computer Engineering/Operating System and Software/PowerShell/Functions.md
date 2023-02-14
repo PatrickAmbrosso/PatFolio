@@ -2,10 +2,9 @@
 title: Functions
 tags: []
 description: "Working with Functions in PowerShell"
+# Docusaurus Configurations
 share: true
----
----
-> **Related Pages:** [PowerShell](PowerShell.md)
+sidebar_position: 5
 ---
 # Introduction to Functions in PowerShell
 Functions are blocks of code that performs a specific operation and that alone. Functions can help to make the code easier to read and understand, as well as debug in case of errors. Functions are used to compartmentalize the code and to avoid one pile of code mess that is executed in linear fashion. Functions can be reused by invoking (or calling) them when required.
