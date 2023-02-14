@@ -26,8 +26,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-import Tabs from '@theme/Tabs';  
-import TabItem from '@theme/TabItem';
+Test Comment
+## Test heading
+
 ```mdx-code-block
 <Tabs>
 <TabItem value="docusaurus.config.js">
