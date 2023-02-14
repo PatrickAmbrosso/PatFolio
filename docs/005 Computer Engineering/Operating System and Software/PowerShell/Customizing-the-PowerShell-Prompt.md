@@ -4,7 +4,7 @@ tags: []
 description: "Various options to customize and personalize the PowerShell Prompt."
 # Docusaurus Configurations
 share: true
-sidebar_position: 1
+sidebar_position: 7
 ---
 The [PowerShell](PowerShell.md) Prompt customization script is given below.
 
