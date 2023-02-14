@@ -2,7 +2,9 @@
 title: PowerShell Modules
 tags: [Reference]
 description: ""
+# Docusaurus Configurations
 share: true
+sidebar_position: 6
 ---
 # Introduction to Modules
 PowerShell module is a package that contains various commands such as functions, cmdlets, aliases, parameters, workflow, and providers. And PowerShell comes with numerous modules installed by default.

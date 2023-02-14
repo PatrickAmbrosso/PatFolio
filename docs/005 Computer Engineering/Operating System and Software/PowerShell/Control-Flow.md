@@ -2,10 +2,9 @@
 title: Control Flow
 tags: []
 description: "Modification of the sequence of code execution in PowerShell"
+# Docusaurus Configurations
 share: true
----
----
-> **Related Pages:** [PowerShell](PowerShell.md)
+sidebar_position: 3
 ---
 # Controlling the Flow of Code Execution
 In [Computer Science](Computer%20Science.md), control flow is the order in which individual statements, instructions or function calls of a program gets executed. Controlling the flow of code execution allows to work in logic into the code execution. 

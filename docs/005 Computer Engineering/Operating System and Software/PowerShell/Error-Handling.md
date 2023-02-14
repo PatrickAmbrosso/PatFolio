@@ -2,10 +2,9 @@
 title: Error Handling
 tags: [] 
 description: "Gracefully handling errors in PowerShell"
+# Docusaurus Configurations
 share: true
----
----
-> **Related Pages:** [PowerShell](PowerShell.md)
+sidebar_position: 4
 ---
 # Working with Exceptions and Errors
 When working with code and its execution, one is sure to encounter bugs and errors in code execution. Some errors can be anticipated and can be dealt with, such as string inputs for numerical variables, invalid file path and so on.

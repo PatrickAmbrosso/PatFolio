@@ -1,7 +1,7 @@
 ---
 title: Bible in a Year (2023)
-Tags: []
-Description: "Roadmap to complete the entirety of the Bible in one year"
+tags: []
+description: "Roadmap to complete the entirety of the Bible in one year"
 share: true
 ---
 # Expedition Overview

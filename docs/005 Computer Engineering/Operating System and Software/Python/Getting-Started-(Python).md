@@ -1,8 +1,10 @@
 ---
-title: Getting Started
+title: Getting Started (Python)
 tags: [Reference]
 description: "Everything about the Python Programming Language"
+# Docusaurus Configurations
 share: true
+sidebar_position: 1
 ---
 # The Beginnings 
 

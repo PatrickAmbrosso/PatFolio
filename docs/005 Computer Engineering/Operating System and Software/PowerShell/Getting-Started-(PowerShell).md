@@ -1,8 +1,11 @@
 ---
-title: PowerShell
+title: Getting Started (PowerShell)
 tags: [Sys-Admin, Automation]
 description: "Up and Running with PowerShell"
+# Docusaurus Configurations
 share: true
+sidebar_position: 1
+image: https://wallpapercave.com/wp/wp7917357.png
 ---
 # Overview
 
