@@ -12,7 +12,7 @@ Commenting and Indentation are some of the most commonly used tools when writing
 ## Commenting Code
 Comments are a way to document code as it is written. While code must preferably be self-documenting, comments play a major part in making sure that the code is easier to understand and troubleshoot. In python, single line commenting is made by using the `#` symbol.
 
-[Python](./Getting-Started.md) does not have a specific syntax for multi-line comments, thus a multi-line comment is a sequence of single-line comments each preceded with a `#` sign. 
+[Python](./Getting-Started-with-Python.md) does not have a specific syntax for multi-line comments, thus a multi-line comment is a sequence of single-line comments each preceded with a `#` sign. 
 
 However, as python ignores string literals that are not assigned to a variable, a multi-line string can be used similar to a multi-line comment. By this way, python will read the string, but as the string is not assigned to a variable, it is ignored. Multi-line strings are made using triple quotes (`"""`) and placing the comment within the pair of these triple quotes.
 
