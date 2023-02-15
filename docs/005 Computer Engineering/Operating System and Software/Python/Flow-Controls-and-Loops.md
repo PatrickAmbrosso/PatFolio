@@ -4,7 +4,7 @@ tags: [Reference]
 description: ""
 share: true
 ---
-# Flow Controls and Loops
+## Flow Controls and Loops
 Flow controls and loops are crucial part of any programming language. They facilitate to logically process a piece of information and take actions based on the outcome.
 
 **Flow statements** are used to control the flow of code execution based on a logical test. If the test case passes, a specific block of code is executed, and if it fails, another action can be triggered.
@@ -21,7 +21,7 @@ Loops are used to iterate over a condition multiple times, based on a condition.
 > [!caution] Premature exits and else blocks
 > When a loop is exited using a `break` statement, the else block will not be executed.
 
-## If-elif-else Flow Control Statement
+### If-elif-else Flow Control Statement
 The is, else and elif statement is used to check for conditions and perform code executions. The order of execution is very important when dealing with the `if-elif-else` statements. The code is executed from top to bottom and the if condition checking process ends when the python finds the first `True` condition. The remaining conditions are not evaluated. It is also possible to chain multiple logical tests using the logical operators in python. The if conditions can also be nested, to check conditions within conditions. 
 
 ```python
@@ -75,7 +75,7 @@ if a > b:
 	pass
 ``` 
 
-## While Loop
+### While Loop
 A while loop is used to iterate over a block of code as long as the condition evaluates to true.
 
 The `else` statement can be used to evaluate a block of code when the condition for a while loop evaluates to a false.
@@ -110,7 +110,7 @@ else:
 	print("The Loop has ended")
 ```
 
-## For Loop
+### For Loop
 For loops are used to iterate over a block of code a set number of times. This loop is chosen when the number of times the looping has to be done is known.
 
 Several ways can be used to supply the looping entity to the for loop. For loop is most often used over collection data types such as lists, sets, tuples and dictionaries.

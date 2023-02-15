@@ -1,19 +1,20 @@
 ---
 # Basic Note Frontmatter
-title: Bourne Again Shell
+title: Getting Started with Bash
 tags: []
 description: "Everything about the shell that is found in most linux distributions"
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
 ---
+```mdx-code-block
+import Tabs from '@theme/Tabs';  
+import TabItem from '@theme/TabItem';
+```
 # The Bourne Again Shell
 **Bash** or ***B*ourne *A*gain *Sh*ell** is the command line shell that is found in most of the Linux Distributions. Some of the other popular shells include the following.
 1. Zsh
 2. Fish
-
-import Tabs from '@theme/Tabs';  
-import TabItem from '@theme/TabItem';
 
 ## Installation Guide
 
