@@ -4,10 +4,10 @@ tags: [Reference]
 description: ""
 share: true
 ---
-# Data Types
+## Data Types
 Any data that can be stored in computer memory to be utilized when the program is executed belongs to a particular type. 
 
-## Broad Classification
+### Broad Classification
 The default data types used in Python are given below classified into related types.
 
 | Data Type Group | Data Type              | Notation  | Description                                                                                                                                                       |
@@ -28,7 +28,7 @@ The default data types used in Python are given below classified into related ty
 | Binary Types    | Memory View            | memory    |                                                                                                                                                                   |
 | Note Type       | None Type              | NoneType  | NoneType is not a value, but merely an absence of it. It is similar to null in some other programming languages.                                                  |
 
-## Text Types
+### Text Types
 Python has only one default data type for working with strings of any length.
 
 1. **Strings** (`str`)
@@ -49,7 +49,7 @@ print(message[2:]) # prints from the 3rg character till the end
 print(message[-5:-2]) # prints 3 characters from 5th last position to 2 last --> Wor
 ```
 
-## Numeric Types
+### Numeric Types
 Python accepts 3 numeric data types such as `int`, `float` and `complex` 
 
 1. **Integers** (`int`)
@@ -78,7 +78,7 @@ x = 5+2j # Implicit
 x = int(10j) # Explicit
 ```
 
-## Sequence Types 
+### Sequence Types 
 Sequence data types are collections of data referred
 
 1. **Lists**
@@ -117,7 +117,7 @@ for i in range(5):
 
 ```
 
-## Mapping Types 
+### Mapping Types 
 Maps are a key-value combination of data. The value is uniquely identified by using the key.
 
 1. **Dictionary**
@@ -136,8 +136,7 @@ thisdict = {
 print(thisdict["brand"])
 ```
 
-## Set Types 
-
+### Set Types 
 1. Set
 	- Sets are collections of values of the same or different data type.
 	- They are unordered, unchangeable, unindexed, mutable.
@@ -150,7 +149,7 @@ print(thisdict["brand"])
 myset = {"apple", "banana", "cherry"}
 ```
 
-## Boolean Types 
+### Boolean Types 
 Boolean data represents the state of ON/OFF, TRUE/FALSE or 1/0.
 
 1. **Bool**
@@ -162,8 +161,7 @@ print(10 > 9)
 print(10 < 9)
 ```
 
-## Binary Types 
-
+### Binary Types 
 1. Bytes
 	- 
 2. Byte Array
@@ -175,7 +173,7 @@ print(10 < 9)
 
 ```
 
-## None Type
+### None Type
 None or Null are absence of values where an empty string (`""`) or a zero (`0`) as a value cannot be substituted.
 
 1. **NoneType**
