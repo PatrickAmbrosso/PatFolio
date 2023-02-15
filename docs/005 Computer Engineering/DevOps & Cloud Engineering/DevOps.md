@@ -17,7 +17,7 @@ share: true
 		- [GoLang](GoLang.md)
 	- [Scripting Languages](Scripting%20Languages.md)
 		- [PowerShell](PowerShell.md)
-		- [Bourne Again Shell](../Operating%20System%20and%20Software/Bash/Bourne-Again-Shell.md)
+		- [Getting Started with Bash](../Operating%20System%20and%20Software/Bash/Getting-Started-with-Bash.md)
 	- [Version Control System](../Operating%20System%20and%20Software/Version%20Control%20Systems/Version-Control-System.md)
 		- [GIT VCS](../Operating%20System%20and%20Software/Version%20Control%20Systems/GIT-VCS.md)
 2. [Databases](Databases.md)
