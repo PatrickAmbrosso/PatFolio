@@ -1,7 +1,10 @@
 ---
+# Basic Note Frontmatter
 title: Getting Started with Python
 tags: [Reference]
 description: "Everything about the Python Programming Language"
+# Publisher Configurations
+folder_structure: ""
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
@@ -28,18 +31,18 @@ Python can be run in 3 different ways and their features and who might consider 
 
 ---
 ## Getting Comfortable
-1. [Python - Inputs and Outputs](Python%20-%20Inputs%20and%20Outputs.md)
-2. [Python - Commenting and Indentation](Python%20-%20Commenting%20and%20Indentation.md)
-3. [Python - Variables](Python%20-%20Variables.md)
-4. [Python - Data Types](Python%20-%20Data%20Types.md)
-5. [Python - Operators](Python%20-%20Operators.md)
-6. [Python - Flow Controls and Loops](Python%20-%20Flow%20Controls%20and%20Loops.md)
-7. [Python - Methods and Functions](Python%20-%20Methods%20and%20Functions.md)
-8. [Python - Object Oriented Programming](Python%20-%20Object%20Oriented%20Programming.md)
-9. [Python - Modules and Packages](Python%20-%20Modules%20and%20Packages.md)
-10. [Python - Errors and Exceptions Handling](Python%20-%20Errors%20and%20Exceptions%20Handling.md)
-11. [Python - Decorators](Python%20-%20Decorators.md)
-12. [Python - Generators](Python%20-%20Generators.md)
+1. [Inputs and Outputs](./Inputs-and-Outputs.md)
+2. [Commenting and Indentation](./Commenting-and-Indentation.md)
+3. [Variables](./Variables.md)
+4. [Data Types](./Data-Types.md)
+5. [Operators](./Operators.md)
+6. [Flow Controls and Loops](./Flow-Controls-and-Loops.md)
+7. [Methods and Functions](./Methods-and-Functions.md)
+8. [Object Oriented Programming](Object%20Oriented%20Programming.md)
+9. [Modules and Packages](Modules%20and%20Packages.md)
+10. [Errors and Exceptions Handling](Errors%20and%20Exceptions%20Handling.md)
+11. [Decorators](Decorators.md)
+12. [Generators](Generators.md)
 
 ---
 ## Showcase 
