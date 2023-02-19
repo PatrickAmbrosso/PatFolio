@@ -15,7 +15,7 @@ share: true
 
 The following is a tiny example of what YAML syntax looks like. 
 
-```yaml "Patrick.config"
+```yaml title="Patrick.config"
 ---
 name: Patrick Ambrose
 alias: "Patrick Ambrosso"
@@ -36,7 +36,7 @@ bank-balance: 0
 ## The importance of whitespace and indentation.
 YAML relies heavily on indentation and whitespaces, which makes very human-readable as well as very strict in syntax for indentation. Consider the following YAML syntax for the correct and incorrect ways to write YAML declarations.
 
-```yaml Correct YAML Syntax
+```yaml title=Correct YAML Syntax
 - journey-type: Dinner Date
   location: "Jacob's Diner"
   time: "7:30 pm"
