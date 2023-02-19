@@ -4,8 +4,45 @@ tags: [Reference]
 description: "Everything about the serialization language YAML"
 share: true
 ---
-# YAML
-**YAML** or **YAML Ain't a Markup Language** is a [Data Serialization Language](Data%20Serialization%20Language.md) that exists with one primary goal above others, to make the code **Human-Readable** and it is primarily used to write configuration files and transfer data across apps and services. 
+## Remember, YAML Ain't a Markup Language!
+**YAML** or **YAML Ain't a Markup Language** is a [declarative](declarative.md) [data serialization](../../../../Data%20Serialization.md) that exists with one primary goal above others, to make the code **Human-Readable** and it is primarily used to write configuration files and transfer data across apps and services. 
+
+[XML](Extensible%20Markup%20Language.md) and [JSON](JavaScript%20Object%20Notation.md) are some of the other examples of Data Serialization Languages in popular use today. Following are some of the salient features of YAML that make it more preferable to be used as a serialization language to transfer data across apps and services.
+1. YAML follows a very *simple*, *human-readable* syntax.
+2. YAML is considered as the superset of [JSON](JavaScript%20Object%20Notation.md). Also YAML and JSON are easily interchangeable.
+3. It supports common data types such as *Integers*, *Floats*, *Strings*, *Boolean*.
+4. YAML basically consists of *Lists* and *Maps* and a combination of both. 
+
+The following is a tiny example of what YAML syntax looks like. 
+
+```yaml "Patrick.config"
+---
+name: Patrick Ambrose
+alias: "Patrick Ambrosso"
+age: 24
+height: 169.69
+funny: true
+skills:
+	- YAML
+	- Git
+	- Docker
+	- AWS
+	- Powershell
+languages: ["Tamil", "English", "French", "German", "Lying"]
+bank-balance: 0
+---
+```
+
+## The importance of whitespace and indentation.
+YAML relies heavily on indentation and whitespaces, which makes very human-readable as well as very strict in syntax for indentation. Consider the following YAML syntax for the correct and incorrect ways to write YAML declarations.
+
+```yaml Correct YAML Syntax
+- journey-type: Dinner Date
+  location: "Jacob's Diner"
+  time: "7:30 pm"
+  date: 2023-02-14
+- journey-type: "Friend's Marriage"
+```
 
 The following are some of the key pointers in YAML
 - YAML borrows features from [PERL](PERL.md), [C Language](C%20Language.md), [XML](Extensible%20Markup%20Language.md) and more.
