@@ -3,8 +3,6 @@
 title: Getting Started with Python
 tags: [Reference]
 description: "Everything about the Python Programming Language"
-# Publisher Configurations
-folder_structure: ""
 # Docusaurus Configurations
 share: true
 sidebar_position: 1
