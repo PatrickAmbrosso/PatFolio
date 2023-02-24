@@ -53,7 +53,7 @@ Containers came into existence to fix the problems that VMs had. In a way Contai
 | Portability and Scaling                       | Being lightweight and conforming to a standard (usually follow a set standard), containers are extremely portable, where almost all cloud providers allow running containers with little to no headway in setting up the environment. Moreover, as containers are units of operations, multiple containers can be deployed thus horizontally scaling the operational capacity. |
 | Operational Speed                             | As containers share the kernel with the operating system, they are much faster than VMs to boot-up and get to an operational state.                                                                                                                                                                                                                                                                                                                                                                                |
 
-:::note A Note About Dependencies and Libraries
+:::tip About Dependencies and Libraries
 All operating systems and virtual environments require certain supporting tools to keep the machine running. These are always required no matter the technology used, may it be bare-metal hosts, VMs or containers. 
 :::
 
@@ -93,6 +93,8 @@ Docker traditionally was developed to work on the Linux OS, but slowly with Micr
 1. Linux Containers - Runs on Windows, Mac and Linux
 2. Windows Containers - Runs on Windows
 
+
+
 ```mdx-code-block
 <Tabs groupId="Linux-and-Windows-Containers-Distinction">
 <TabItem value="Linux containers">
@@ -125,18 +127,29 @@ As containers share the kernel of the host operating system, Windows containers 
 
 ---
 ## Docker Architecture
-Docker, the containerization service (often referred as just docker) comprises of 3 entities under the hood namely,
-1. Runtime
-2. Daemon (or) Engine
-3. Orchestrator
+Docker follows a simple client-server architecture along with a central repository to store and serve the images. Thus, there are 3 main components in a docker implementation.
+1. **Docker Client**
+	- It connects to the docker engine to *send and receive commands and outputs*.
+	- It could be a *GUI Application* such as Docker Desktop (available for Windows and Mac) or a *CLI Tool* available for Docker CLI (Windows, Mac and Linux).
+	- Client can exist on the same machine as the Docker Engine or exist on a different machine.
+2. **Docker Engine (or) Docker Daemon**
+	- It performs all operations related to containers throughout their lifetime.
+	- Often referred to as `dockerd` (pronounced as `docker-dee`).
+	- It manages several container objects such as images, containers, volumes, networks and other plugins.
+3. **Image Repository**
+	-  A storage location for container images.
+	- It could be the official repository from Docker Inc., [Docker Hub](https://hub.docker.com/) or from a third-party provider such as AWS, Azure or GCP or locally maintained by a company.
 
-### Runtime
+Docker communicates across the client, engine and repository by means of *REST API* calls. 
 
+### Docker Client
+- The docker client provides a primary way for the users to interact with docker.
+- It provides an interface to manage container objects such as images, containers, volumes, networks and other plugins.
+- Docker client is available as
+	1. **Docker CLI** - Available in Windows, Mac and Linux.
+	2. **Docker Desktop** - Available on Windows and Mac.
 
-### Daemon (or) Engine
-
-
-### Orchestrator
+### Docker Engine
 
 
 ---
