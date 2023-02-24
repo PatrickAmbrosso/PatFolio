@@ -128,19 +128,20 @@ As containers share the kernel of the host operating system, Windows containers 
 ---
 ## Docker Architecture
 Docker follows a simple client-server architecture along with a central repository to store and serve the images. Thus, there are 3 main components in a docker implementation.
-1. **Docker Client**
+1. **Client**
 	- It connects to the docker engine to *send and receive commands and outputs*.
 	- It could be a *GUI Application* such as Docker Desktop (available for Windows and Mac) or a *CLI Tool* available for Docker CLI (Windows, Mac and Linux).
 	- Client can exist on the same machine as the Docker Engine or exist on a different machine.
-2. **Docker Engine (or) Docker Daemon**
+2. **Server**
+	- This is
 	- It performs all operations related to containers throughout their lifetime.
 	- Often referred to as `dockerd` (pronounced as `docker-dee`).
 	- It manages several container objects such as images, containers, volumes, networks and other plugins.
-3. **Image Repository**
+3. **Repository**
 	-  A storage location for container images.
 	- It could be the official repository from Docker Inc., [Docker Hub](https://hub.docker.com/) or from a third-party provider such as AWS, Azure or GCP or locally maintained by a company.
 
-Docker communicates across the client, engine and repository by means of *REST API* calls. 
+Communication between docker client and docker engine happens over *REST API*. Docker engine runs on *port 2376* by default.
 
 ### Docker Client
 - The docker client provides a primary way for the users to interact with docker.
@@ -150,6 +151,35 @@ Docker communicates across the client, engine and repository by means of *REST A
 	2. **Docker Desktop** - Available on Windows and Mac.
 
 ### Docker Engine
+The docker engine can be considered as the software that runs, manages and terminates the containers as per the user's requirements. Docker engine (currently-2023) is modular in nature and is made up of smaller specialized tools that adhere to open standards such as the [Open Container Initiative](Open%20Container%20Initiative.md) or [OCI](Open%20Container%20Initiative.md).
+
+```mdx-code-block
+<Tabs groupId="docker-engine-old-vs-new-architecture">
+<TabItem value="Current Microservices-Based Architecture">
+```
+
+Docker engine (currently-2023) is made up of the following components.
+1. docker daemon or `dockerd` - 
+2. `containerd`
+3. `shim-containerd`
+4. `runc`
+5. Optional Plugins
+
+```mdx-code-block
+</TabItem>
+<TabItem value="Older Monolithic Architecture">
+```
+
+When docker was initially released, the docker engine had two components.
+1. Docker Daemon or `dockerd`
+2. LXC
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
+
+
 
 
 ---
