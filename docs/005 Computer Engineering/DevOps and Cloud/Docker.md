@@ -143,43 +143,90 @@ Docker follows a simple client-server architecture along with a central reposito
 
 Communication between docker client and docker engine happens over *REST API*. Docker engine runs on *port 2376* by default.
 
-### Docker Client
+### Client
 - The docker client provides a primary way for the users to interact with docker.
 - It provides an interface to manage container objects such as images, containers, volumes, networks and other plugins.
 - Docker client is available as
 	1. **Docker CLI** - Available in Windows, Mac and Linux.
 	2. **Docker Desktop** - Available on Windows and Mac.
 
-### Docker Engine
-The docker engine can be considered as the software that runs, manages and terminates the containers as per the user's requirements. Docker engine (currently-2023) is modular in nature and is made up of smaller specialized tools that adhere to open standards such as the [Open Container Initiative](Open%20Container%20Initiative.md) or [OCI](Open%20Container%20Initiative.md).
+### Engine
+The docker engine can be considered as the software that runs, manages and terminates the containers as per the user's requirements. Docker engine (currently-2023) is modular in nature and is made up of smaller specialized tools that adhere to open standards such as the Open Container Initiative or OCI.
 
-```mdx-code-block
-<Tabs groupId="docker-engine-old-vs-new-architecture">
-<TabItem value="Current Microservices-Based Architecture">
-```
-
-Docker engine (currently-2023) is made up of the following components.
-1. docker daemon or `dockerd` - 
-2. `containerd`
-3. `shim-containerd`
-4. `runc`
-5. Optional Plugins
-
-```mdx-code-block
-</TabItem>
-<TabItem value="Older Monolithic Architecture">
-```
-
+#### Monolithic Docker Engine from the past
 When docker was initially released, the docker engine had two components.
-1. Docker Daemon or `dockerd`
-2. LXC
+1. **Docker Daemon or `dockerd`** - a singular daemon that contained the code for client, API, container runtime and more.
+2. **LXC** (Linux Containers)- An OS-level virtualization technology that allows creation and management of multiple isolated Linux virtual environments on a single control host
 
-```mdx-code-block
-</TabItem>
-</Tabs>
-```
+The docker daemon was built as a monolith that performs several functionalities and LXC was specific to Linux, thus threatening the cross-platform ambition of docker.
 
+LSX was soon replaced with `libcontainer` developed in-house by Docker. Inc. to provide a cross-platform functionality to docker. `libcontainer ` replaced LXC as the execution driver in docker 0.9.
 
+The next priority was to breakdown the monolithic docker daemon into microservices. This gave rise to tools such as `runc`, `containerd` and `shim` discussed below.
+
+#### Open Container Initiative (OCI)
+The [Open Container Initiative](https://opencontainers.org/) or the OCI is an open governance standard/structure for the purpose of creating industry standards around container formats and runtimes. OCI was established in 2015 by Docker and other industry leaders in the container industry.
+
+OCI currently contains 3 specifications
+1. **Runtime Specification (`runtime-spec`)**
+2. **Image specification (`image-spec`)**
+3. **Distribution Specification (`distribution-spec`)**
+
+#### Docker in its present state
+Currently (2023), Docker engine is made up of the following components.
+1. **docker daemon or `dockerd`**
+	- The docker daemon or `dockerd` provides an interface between the docker client and the core docker functionalities.
+	- The client communicates to `dockerd` via REST API and `dockerd` delegates the tasks and performs the actions as directed from the client.
+	- From being a monolithic implementation to a microservices focussed tool, most of the `dockerd`'s initial functionality is stripped into their own services.
+	- Currently, the daemon is responsible for image management, image builds, REST API communication, authentication, security, core network
+2. **`containerd`**
+	- Its main functionality is to manage container lifecycle.
+	- It interfaces between the daemon and `runc`
+	- Initially it set out to be a lightweight container management tool, it soon took additional functionality of managing other objects such as images, volumes and networks.
+	- However, as `containerd` is very modular, most of the functionality can be added only if required, thus keeping the size small.
+	- [`containerd`](https://containerd.io/) is currently a graduated CNCF project.
+3. **`shim`**  
+	- `shim` promotes the concept of daemon-less containers.
+	- It is used to decouple the container runtimes from the `containerd` service.
+	- This is advantageous as the now-decoupled environment is not dependent on `containerd` for its operation, thus allowing `containerd` and thereby the daemon to be started, stopped or upgraded without killing all the running containers.
+	- Every time a new container needs to be started, a new fork of the `runc` is created.
+	- `runc` then starts the container and then exists.
+	- `shim` then takes over the process and manages the containers by keeping the STDIN and STDOUT streams open and reporting container's exit status back to the daemon.
+4. **`runc`**
+	- It is the reference implementation of the OCI `runtime-spec`. 
+	- `runc` is referred to operating at the OCI layer.
+	- It is a lightweight CLI wrapper for `libcontainer`  interfacing between the host kernel and the container.
+	- At its core, the functionality of `runc` is to start containers and it is very efficient at doing that.
+	- `runc` can be replaced with any other OCI `runtime-spec` compatible runtimes.
+
+### Image Repository/Registry
+[Docker Hub](https://hub.docker.com/) is the most popular image repository/registry to upload and manage docker images (OCI compatible images). It offers features such as image versions (tags), public and paid repositories and much more. There are several [pricing options](https://www.docker.com/pricing/) that offer varied support and feature set.
+
+There are other image repositories as well. Some of the other popular ones include
+- [Amazon Elastic Container Registry](https://aws.amazon.com/ecr/) by AWS.
+- [Azure Container Registry](https://azure.microsoft.com/en-in/products/container-registry/) by Azure.
+- [Container Registry](https://cloud.google.com/container-registry/) by Google Cloud (GCP)
+
+---
+## Communication via REST API
+Communication between the client, docker engine and the image repository occurs via REST API. This is implemented by the docker daemon.
+
+Docker can be set up in two ways
+1. Docker Client and Docker Engine on the same host - Communication over the IPC socket.
+2. Docker Client and Docker Engine on different hosts - communication over the network
+
+#### Client and Engine on Same Host
+In a default installation, the docker client and the docker engine are setup in the same host. In such cases the communication is made via the local IPC socket.
+
+:::note IPC Socket
+Unix Domain Socket (UDS) or Inter-Process Communication (IPC) Socket is a data communications endpoint for exchanging data between processes running on the same host operating system. It is a standard component of the POSIX operating systems.
+
+In an IPC Socket communication, all communication occurs entirely within the operating system kernel. 
+:::
+
+The socket can be found at `/var/run/docker.sock` on Linux and at `//./pipedocker_engine` on Windows. 
+
+#### Client and Engine on Different Host
 
 
 ---
