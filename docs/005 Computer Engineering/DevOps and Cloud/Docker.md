@@ -230,12 +230,291 @@ The socket can be found at `/var/run/docker.sock` on Linux and at `//./pipedocke
 
 
 ---
-## Images and what they capture
+## Docker Objects
+Docker comprises of several entities referred commonly as objects. These are
+1. **Images** - Templates that are used when containers are created and used.
+2. **Containers** - Running/operational instance of an image.
+3. **Volumes** - Persistent storage for data created and stored during container runtimes.
+4. **Networks** - Constructs of networking that enable containers to communicate within themselves and outside of the docker environment to the docker host and to other external networks.
+5. **Plugins** - Optional functionalities across domains such as volume, networking, authentication and so on that can be added to the docker engine.
+
+### Images
+- Images are one of the core parts of a docker implementation.
+- They are templates from which containers are created.
+- Hence images are considered as build-time constructs.
+- Once a container is created from an image, they both become dependent on each other, thus the *image cannot be destroyed unless all of the containers that use the image are stopped and removed*. 
+- Images are usually small in size as they contain the barebones of what is required to run the app or service or environment and nothing else. Containers use the host's operating system for lower level tasks, hence the light weightiness of the images.
+- However, Microsoft's images on windows are a little bit larger in size due to the architecture of the Windows Operating System.
+
+#### Pulling Images
+The process of downloading an image from a repository is referred to as **pulling**. Docker defaults to Docker Hub as source repository, however it is possible to change the repository when pulling the images and the process remains the same nonetheless. 
+
+```bash title="docker pull command"
+docker pull ubuntu:latest
+```
+
+If the image did not exist prior locally, it is pulled as given below.
+
+```txt title="docker pull output - new pull"
+latest: Pulling from library/ubuntu
+677076032cca: Pull complete
+Digest: sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+```
+
+However, if the image already exists locally, the following information is given by the docker engine back to the client.
+
+```txt title="docker pull output - existing image"
+latest: Pulling from library/ubuntu
+Digest: sha256:9a0bdde4188b896a372804be2384015e90e3f84906b750c1a53539b585fbbe7f
+Status: Image is up to date for ubuntu:latest
+docker.io/library/ubuntu:latest
+```
+
+What happens if an image that does not exist is requested for a pull?
+
+```bash
+docker pull totally-fake-image
+```
+
+The action returns the following response.
+
+```txt
+Using default tag: latest
+Error response from daemon: pull access denied for totally-fake-image, repository does not exist or may require 'docker login': denied: requested access to the resource is denied
+```
+
+To pull all images in a repository (usually not recommended) pass the `-a` flag to the docker pull command.
+
+```bash
+docker pull -a image
+```
+
+#### Listing the locally stored Images
+To list the images that are currently available locally, the following commands can be used.
+
+```bash
+docker images
+docker image ls
+```
+
+Docker then displays all the images that are available locally.
+
+```txt
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+postgres     latest    680aba37fd0f   2 weeks ago   379MB
+node         latest    272b8142e84e   2 weeks ago   998MB
+mysql        latest    57da161f45ac   2 weeks ago   517MB
+ubuntu       latest    58db3edaf2be   4 weeks ago   77.8MB
+```
+
+The `docker image ls` command allows to filter the output of the docker images returned based on certain criteria such as
+- **dangling (Accepts Boolean)** - Untagged images which usually occur when newer images are built with the tag that exists prior. Docker removes the tag from the older version of the image and attaches the tag to the newer image, thus leaving the older image without tags.
+- **before (Accepts image name/ID)** - Returns all the images created before the supplied image.
+- **since (Accepts image name/ID)** - Returns all the images created after the supplied image.
+- **label (Accepts string)** - Returns the images based on the presence of a label or value. However, the docker images ls command does not display labels in its output.
+
+Docker also supports filtering using reference (additional functioning features) and the usage Go templates using the `--format` flag.
+
+```bash
+# List images that are devoid of tags
+docker image ls --filter dangling=true
+
+# List images that have tags
+docker image ls --filter dangling=false
+
+# List images before the curious-salamander 
+docker image ls --filter before="curious-salamander"
+
+# List images after the curious-salamander
+docker image ls --filter since="curious-salamander"
+
+# List images with Go Templates formatting
+docker image ls --format "{{.Repository}}: {{.Tag}} - {{.Size}}"
+```
+
+#### Image Naming
+Each and every image is labelled in a container registry to make it easier to identify the image. A standard image nomenclature is given below.
+
+```txt
+registry-link/repository-link/image-name:tag
+```
+
+- `registry-link`
+	- DNS name of the image registry.
+	- Instructs docker client of which registry to use.
+	- This is optional, will resolve to Docker Hub registry if no input is provided.
+- `repository-link`
+	- Name of the repository that hosts the image of interest.
+	- Official images are stored by Docker Hub in the top-level of the docker Hub namespace.
+	- This is not used if the image under question resides on the top level domain in Docker Hub.
+	- For third-party images, repository link is mandatory.
+- `image-name`
+	- Denotes the actual name of the image of interest.
+	- This is a mandatory field.
+- `tag`
+	- Denotes a variant of the image within the repository.
+	- it is just a string used for easy identification.
+	- Usually, repositories would have an incrementing numeric progression.
+	- The latest version, by convention is also tagged as latest to facilitate easy identification.
+	- However, it might not be the case always and it entirely depends on the developer and maintainer of the image
+	- The same image can have more than one tags as repositories do not restrict with content.
+	- It is always best practice to refer the documentation of the respective images to better understand the naming convention of the tags used foe the particular image.
+
+#### Searching the repository
+To search for a particular image, the `docker search` command can be used. However it only searches the NAME field. By default, Docker displays only 25 hits, which can be increased to 100 with the limit flag.
+
+```bash
+docker search alpine --limit 5
+```
+
+This returns all the images with the text alpine in the NAME field.
+
+```txt
+NAME                               DESCRIPTION                STARS     OFFICIAL   AUTOMATED
+alpine                             A minimal Docker image …   9724      [OK]
+alpinelinux/docker-cli             Simple and lightweight …   7
+alpinelinux/gitlab-runner          Alpine Linux gitlab-run…   4
+alpinelinux/alpine-gitlab-ci       Build Alpine Linux pack…   3
+alpinelinux/gitlab-runner-helper   Helper image container …   2
+```
+
+#### Made up of Layers
+An image in Docker is made up of several layers of files that make up the final image. This is done to make the images modular. Docker finally stacks the layers and displays them as a single image. This is done to make docker efficient in operation and avoid constant re-download of existing layers from other images.
+
+Suppose, if an ubuntu image has to be downloaded for the latest version, it might share the underlying layers from the previous versions of ubuntu. In that case, only the new layers are downloaded and the existing ones are used as such. 
+
+Layers are represented using their SHA256 hashes. This is used by docker to identify and use the layers across images without downloading the same layer again for another image.
+
+The number of layers is based upon what the image does, the core applications it runs and that base image was used to build the image.
+
+These layers can be seen when trying to pull and image. To know the different layers that make up an image, use the `docker image inspect` command.
+
+```bash
+docker image inspect <container-name/container-ID>:<tag>
+```
+
+Behind the scenes, docker employs a storage driver that enables the layer stacking and presenting them as a single file system. However, the user experience remains identical in each case. The following are the storage drivers available in Linux and Windows.
+
+- Storage Drivers available on Linux
+	- `AUFS`
+	- `overlay2`
+	- `devicemapper`
+	- `btrfs`
+	- `zfs`
+- Storage Drivers on Windows
+	- `windowsfilter`
+
+#### Content Hashes, Digests and Immutability
+Docker 1.10 introduced the concept of content hashes, where each and every image gets a *cryptographic content hash* which is a representation of  the contents of an image. This makes it impossible to change the contents of an image 
+without changing the hash. This is referred to as **digest**, which are a way to uniquely identify an image.
+
+When an image is pulled, the docker client shows the digest associated with the image. To show all the images along with their digest, use the --digest flag to `docker images` command
+
+```bash
+docker images --digest
+```
+
+```txt
+REPOSITORY   TAG       DIGEST               IMAGE ID       CREATED       SIZE
+postgres     latest    sha256:901df89014…   680aba37fd0f   2 weeks ago   379MB
+node         latest    sha256:33e99abf6c…   272b8142e84e   2 weeks ago   998MB
+mysql        latest    sha256:8653a170e0…   57da161f45ac   2 weeks ago   517MB
+ubuntu       latest    sha256:9a0bdde418…   58db3edaf2be   4 weeks ago   77.8MB
+
+# NOTE: The digest hash is truncated for better visibility
+```
+
+Currently, there is no provision to get the digest has for images in a remote registry. To get the digest of an image, the image needs to be pulled locally.
+
+#### Deleting Images
+Deleting images can be done by using the docker `images rm` or the `docker rmi` command. Deleting an image remove the layers corresponding to the image from the host. However, if any of the layers is shared across multiple other images, the layer is not removed until all other images are also deleted.
+
+```bash
+# Delete images (command 1)
+docker image rm <image-name/image-ID>
+
+# Delete images (command 2)
+docker rmi <image-name/image-ID>
+
+# Deleting multiple images
+docker rmi <image-1-name/image-1-ID> <image-2-name/image-2-ID>
+
+# Deleting all existing images
+docker rmi $(docker images -q)
+```
+
+### Containers
+Docker implements containers adhering to the OCI runtime, image and specifications, thus making them compatible to be run on other containerization platforms also following the OCI standards. A container is the runtime instance of an image. It can be considered similar to a VM instance, but it is much faster and lightweight than a typical VM. Also Containers share the OS/Kernel of the host and install only the libraries and dependencies required by the application or service that the container hosts. 
+
+#### Run Containers (basics)
+Containers can be run from an image which can be either locally available or hosted in an image registry. If locally available, containers are spun up from the local copy of the image. If the images are not available locally, they are pulled from the remote registry and then the containers are spun up. Thus, containers can only be spun from a local copy of images, which makes them dependent during runtime.
+
+```bash
+docker run -it centos:latest /bin/bash
+```
+
+The following outputs results in case the image does not exist locally.
+
+```txt
+Unable to find image 'centos:latest' locally
+latest: Pulling from library/centos
+a1d0c7532777: Pull complete
+Digest: sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177
+Status: Downloaded newer image for centos:latest
+[root@adcd9bc897de /]#
+```
+
+In case a copy of the image is found locally, the following output can be obtained where the container is started straightaway.
+
+```txt
+[root@e5da8ec268a1 /]#
+```
+
+#### Listing Containers
+The following command(s) can be used to list the containers currently managed by the docker engine.
+
+```bash
+# List running containers
+docker ps
+
+# List all containers (stopped and running)
+docker ps -a
+```
+
+Upon executing the following output can be obtained
+
+```txt
+# Listing just the running containers
+CONTAINER ID   IMAGE           COMMAND        CREATED         STATUS         PORTS     NAMES
+b83c2173f913   centos:latest   "sleep 1000"   3 seconds ago   Up 2 seconds             wonderful_wilson
+
+# Listing all the containers (stopped and running)
+CONTAINER ID   IMAGE           COMMAND        CREATED              STATUS                          PORTS     NAMES
+b83c2173f913   centos:latest   "sleep 1000"   About a minute ago   Up About a minute                         wonderful_wilson
+464420bfbaba   centos:latest   "/bin/bash"    About a minute ago   Exited (0) About a minute ago             gifted_robinson
+e5da8ec268a1   centos:latest   "/bin/bash"    10 minutes ago       Exited (0) 2 minutes ago                  objective_banach
+adcd9bc897de   centos:latest   "/bin/bash"    11 minutes ago       Exited (0) 10 minutes ago                 gracious_borg
+
+```
+
+```
+# Stop a Container
+docker stop <container-name/container-ID>
+
+# Remove (delete) a container (after it is stopped)
+docker rm <container-name/container-ID>
+```
 
 
----
-## Containers and what they do
+### Volumes
 
+
+### Networks
+
+
+### Plugins
 
 ---
 ## Deployment with Docker Compose
