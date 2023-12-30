@@ -49,6 +49,7 @@ jobs:
         run: |
           pnpm docs:build
           touch dist/.nojekyll
+          find dist/ -type f -exec sed -i 's/@assets/https:\/\/domain.com/g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
