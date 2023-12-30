@@ -72,7 +72,7 @@ export default defineConfig({
 // Navigation Bar Configuration
 function navBar() {
   return [
-    { text: 'Mindforest', link: '/Mindforest/' },
+    { text: 'Mindforest', link: '/mindforest/' },
     { 
       text: 'Learning',
       items: [
@@ -87,8 +87,8 @@ function navBar() {
         { 
           text: 'DevOps & Cloud Projects',
           items: [
-            { text: 'Kubernetes @ Home', link: '/Showcase/Kubernetes-K3S/'},
-            { text: 'AWS-ome', link: '/About-Me' },
+            { text: 'Kubernetes @ Home', link: '/showcase/Kubernetes-K3S/'},
+            { text: 'AWS-ome', link: '/aws-cloud-' },
             { text: 'CloudFares', link: 'https://bento.me/patrickambrosso' }
           ]
         },
@@ -152,8 +152,7 @@ function sideBarNotes() {
       collapsed: true,
       link: '/notes/utilities/',
       items: [
-        { text: 'FFMPEG', link: '/notes/utilities/ffmpeg' },
-        { text: 'PowerShell', link: '/Notes/Programming-Languages/PowerShell/' }
+        { text: 'FFMPEG', link: '/notes/utilities/ffmpeg' }
       ]
     }
   ]
@@ -166,10 +165,10 @@ function sideBarGuides() {
       collapsed: true,
       link: '/guides/config-ref/',
       items: [
-        { text: 'Windows Terminal Config', link: '/guides/config-ref/' },
-        { text: 'Bash Terminal', link: '/guides/config-ref/' },
-        { text: 'PowerShell Config', link: '/guides/config-ref/' },
-        { text: 'Starship Prompt', link: '/guides/config-ref/' },
+        { text: 'Windows Terminal Config', link: '/guides/config-ref/windows-terminal' },
+        { text: 'Bash Terminal', link: '/guides/config-ref/bash-terminal' },
+        { text: 'PowerShell Config', link: '/guides/config-ref/pwsh-config' },
+        { text: 'Starship Prompt', link: '/guides/config-ref/starship-prompt' },
       ]
     },
     {
@@ -177,8 +176,8 @@ function sideBarGuides() {
       collapsed: true,
       link: '/guides/homelab/',
       items: [
+        { text: 'Homer', link: '/guides/homelab/dashboard' },
         { text: 'PiHole', link: '/guides/homelab/pihole' },
-        { text: 'Homer Dashboard', link: '/guides/homelab//Monitoring' },
       ]
     }
   ]
@@ -189,20 +188,20 @@ function sideBarRoadmaps() {
     {
       text: 'HomeLab Guides',
       collapsed: true,
-      link: '/Roadmaps/HomeLab-Guides/',
+      link: '/roadmaps/homeLab-guides/',
       items: [
-        { text: 'HomeLab Considerations', link: '/Roadmaps/HomeLab-Guides/Considerations'}
+        { text: 'HomeLab Considerations', link: '/roadmaps/homeLab-guides/considerations'}
       ]
     },
     {
       text: 'DevOps Guides',
       collapsed: true,
-      link: '/Roadmaps/DevOps-Guides/',
+      link: '/roadmaps/devops-guides/',
       items: [
-        { text: 'IaC', link: '/Roadmap/DevOps-Guides/Iac' },
-        { text: 'Monitoring', link: '/Roadmap/DevOps-Guides/Monitoring' },
-        { text: 'Logging', link: '/Roadmap/DevOps-Guides/Logging' },
-        { text: 'Continuous Integration', link: '/Roadmap/DevOps-Guides/Continuous-Integration' }
+        { text: 'IaC', link: '/roadmaps/devops-guides/Iac' },
+        { text: 'Monitoring', link: '/roadmaps/devops-guides/monitoring' },
+        { text: 'Logging', link: '/roadmaps/devops-guides/logging' },
+        { text: 'Continuous Integration', link: '/roadmaps/devops-guides/ci' }
       ]
     }
   ]

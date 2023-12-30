@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Explore PatFolio
-      link: /Mindforest/
+      link: /mindforest/
     - theme: alt
       text: About Me
       link: /About-Me
