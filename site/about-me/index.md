@@ -13,4 +13,6 @@ Here's something about me.
 
 @assets/BMs-VMs-Containers.png
 
+```txt
 ![](/hero.png)
+```
