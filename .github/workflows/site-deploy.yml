@@ -47,9 +47,9 @@ jobs:
         run: pnpm install
       - name: Build with VitePress
         run: |
+          find site/ -type f -exec sed -i 's/\[@assets\([^]]*\)\]/![](https:\/\/patfolio-assets.s3.ap-south-1.amazonaws.com\1)/g' {} +
           pnpm docs:build
           touch dist/.nojekyll
-          find dist/ -type f -exec sed -i 's|\[@assets\([^]]*\)\]|<img src="https://patfolio-assets.s3.ap-south-1.amazonaws.com\1" alt="">|g' {} +
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

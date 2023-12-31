@@ -1,1 +1,1 @@
-<img src="https://domain.com/image.png" alt="">
+![](https://patfolio-assets.s3.ap-south-1.amazonaws.com/image.png)
