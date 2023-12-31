@@ -5,6 +5,7 @@ prev: false
 next: false
 aside: false
 sidebar: false
+lastUpdated: false
 ---
 # Hey, it's Patrick
 
