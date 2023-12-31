@@ -11,8 +11,6 @@ lastUpdated: false
 
 Here's something about me.
 
-@assets/BMs-VMs-Containers.png
-
 ```txt
-![](/hero.png)
+@assets/BMs-VMs-Containers.png
 ```
