@@ -31,15 +31,15 @@ features:
     link: notes/
   - icon: 📌
     title: Guides
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Discover how-to guides and practical wisdom in my Guides section.
     link: guides/
   - icon: 🗺️
     title: Roadmaps
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Unlock structured learning with meticulously curated paths in the dedicated Roadmaps section.
     link: roadmaps/
   - icon: 🖼️
     title: Showcase
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Step into my Showcase – a gallery of passion projects and professional endeavors.
     link: showcase/
   - icon: 🤵🏽
     title: About Me
