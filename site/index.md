@@ -21,10 +21,10 @@ hero:
       link: mailto:hey@patrickambrose.com
 
 features:
-  - icon: 🌳
-    title: Mindforest (Digital Garden)
+  - icon: 🧠
+    title: Mindforest
     details: This is where I capture my thoughts and new interesting things I come across.
-    link: mindforest/
+    link: Mindforest/
   - icon: 📕
     title: Notes
     details: These are my <strong>#learninginpublic</strong> notes. Feel free to explore for new things to learn.

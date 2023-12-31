@@ -64,7 +64,7 @@ export default defineConfig({
     },
 
     footer: {
-      copyright: 'Copyright © 2024 <a href="https://github.com/PatrickAmbrosso"><strong>Patrick Ambrose</strong></a>'
+      copyright: '© 2024 <a href="https://github.com/PatrickAmbrosso">Patrick Ambrose</strong></a><br>Crafted with ❤️ and published under the <a href="/license-notice/">MIT License</a>'
     }
   }
 })
@@ -109,7 +109,7 @@ function navBar() {
         {
           text: 'About Me',
           items: [
-            { text: "Hey, It's Patrick", link: '/About-Me' },
+            { text: "Hey, It's Patrick", link: '/about-me/' },
             { text: 'Latest Updates?', link: 'https://bento.me/patrickambrosso' },
             { text: 'My Resumé', link: 'https://www.patrickambrose.com/resume-2023.pdf' }
           ]
@@ -214,9 +214,9 @@ function sideBarShowcase() {
       collapsed: true,
       link: '/showcase/devops-and-cloud/',
       items: [
-        { text: 'Kubernetes @ Home', link: '/showcase/devops-and-cloud/Getting-Started' },
-        { text: 'AWS-ome', link: '/Projects/HomeLab/Purchasing-Equipment' },
-        { text: 'Cloudfares', link: '/Projects/HomeLab/Configuring-Stacks' },
+        { text: 'Kubernetes @ Home', link: '/showcase/kubernetes-k3s/' },
+        { text: 'AWS-ome', link: '/showcase/aws-ome/' },
+        { text: 'Cloudfares', link: '/showcase/cloudfares/' },
       ]
     },
     {
