@@ -11,9 +11,3 @@ lastUpdated: false
 
 Here's something about me.
 
-[@assets/BMs-VMs-Containers.png]
-
-Another Image
-
-[@assets/DevOps-Lifecycle.png]
-
