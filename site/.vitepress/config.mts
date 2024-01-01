@@ -22,7 +22,7 @@ export default defineConfig({
       provider: 'local'
     },
     
-    logo: 'logo.png',
+    logo: '/logo.png',
     siteTitle: "PatFolio",
 
     outline: {
@@ -51,9 +51,9 @@ export default defineConfig({
     ],
 
     lastUpdated: {
-      text: 'Last Updated On',
+      text: 'Updated on',
       formatOptions: {
-        dateStyle: 'full',
+        dateStyle: 'medium',
         timeStyle: 'medium'
       }
     },
@@ -84,23 +84,20 @@ function navBar() {
     { 
       text: 'Showcase',
       items: [
+        { text: 'Showcase Gallery', link: '/showcase/' },
         { 
           text: 'DevOps & Cloud Projects',
           items: [
             { text: 'Kubernetes @ Home', link: '/showcase/Kubernetes-K3S/'},
-            { text: 'AWS-ome', link: '/aws-cloud-' },
-            { text: 'CloudFares', link: 'https://bento.me/patrickambrosso' }
+            { text: 'AWS-ome', link: 'showcase/aws-cloud' }
           ]
         },
         { 
           text: 'Dev Projects',
           items: [
             { text: 'Charming AWS CLI', link: '/About-Me' },
-            { text: 'Biblically Accurate', link: 'https://bento.me/patrickambrosso' },
-            { text: 'Project 2', link: 'https://bento.me/patrickambrosso' }
           ]
-        },
-        { text: 'Others & Misc', link: '/Roadmaps/' }
+        }
       ] 
     },
     {
@@ -117,8 +114,8 @@ function navBar() {
         {
           text: 'About PatFolio',
           items: [
-            { text: 'The PatFolio Project', link: '/About-Me' },
-            { text: 'Make your own PortFolio', link: '/guides/Vitepress-Portfolio/' }
+            { text: 'The PatFolio Project', link: '/showcase/patfolio/' },
+            { text: 'Make your own PortFolio', link: '/guides/vitepress-portfolio/' }
           ]
         }
       ]
@@ -185,25 +182,8 @@ function sideBarGuides() {
 
 function sideBarRoadmaps() {
   return [
-    {
-      text: 'HomeLab Guides',
-      collapsed: true,
-      link: '/roadmaps/homeLab-guides/',
-      items: [
-        { text: 'HomeLab Considerations', link: '/roadmaps/homeLab-guides/considerations'}
-      ]
-    },
-    {
-      text: 'DevOps Guides',
-      collapsed: true,
-      link: '/roadmaps/devops-guides/',
-      items: [
-        { text: 'IaC', link: '/roadmaps/devops-guides/Iac' },
-        { text: 'Monitoring', link: '/roadmaps/devops-guides/monitoring' },
-        { text: 'Logging', link: '/roadmaps/devops-guides/logging' },
-        { text: 'Continuous Integration', link: '/roadmaps/devops-guides/ci' }
-      ]
-    }
+    { text: 'DevOps Engineer Roadmap', link: '/roadmaps/devops-engineer'},
+    { text: 'Cloud Engineer Roadmap', link: '/roadmaps/cloud-engineer'}
   ]
 }
 

@@ -10,4 +10,3 @@ lastUpdated: false
 # Hey, it's Patrick
 
 Here's something about me.
-
