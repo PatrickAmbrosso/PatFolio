@@ -132,3 +132,6 @@ docs/.vitepress/cache
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# assets - uploaded to aws s3
+assets/
